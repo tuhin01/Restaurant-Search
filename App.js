@@ -10,11 +10,7 @@ export default () => {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Search">
-                <Stack.Screen
-                    name="Search"
-                    component={SearchScreen}
-                    options={{ title: "Business Search" }}
-                />
+                <Stack.Screen name="Search" component={SearchScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
