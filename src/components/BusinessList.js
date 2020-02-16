@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
         borderColor: "#ccc",
     },
     title: {
-        fontSize: 26,
+        fontSize: 18,
         fontWeight: "bold",
-        marginVertical: 8,
+        marginVertical: 12,
     },
 });
 
