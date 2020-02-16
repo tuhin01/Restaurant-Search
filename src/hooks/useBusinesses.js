@@ -5,7 +5,8 @@ export default () => {
     const [businesses, setBusinesses] = useState([]);
     const [errorMessage, setErrorMessage] = useState("");
 
-    const getBusinesses = async searchTerm => {
+    async function getBusinesses(searchTerm) {
+        console.log("Here in getBusiness");
         try {
             const response = await yelp.get("/search", {
                 params: {
@@ -16,13 +17,16 @@ export default () => {
             });
             setBusinesses(response.data.businesses);
         } catch (e) {
+            console.log(e);
             setErrorMessage("Something went wrong");
         }
-    };
+    }
 
     useEffect(() => {
-        getBusinesses("pasta");
-    });
+        (async () => {
+            await getBusinesses("pasta");
+        })();
+    }, []);
 
     return [getBusinesses, businesses, errorMessage];
 };
