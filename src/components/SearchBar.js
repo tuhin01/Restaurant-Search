@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
     searchcontainer: {
         backgroundColor: "#F0EEEE",
         height: 50,
+        marginHorizontal: 16,
+        marginTop: 12,
         borderRadius: 5,
         flexDirection: "row",
     },
