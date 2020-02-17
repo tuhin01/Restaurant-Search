@@ -15,7 +15,7 @@ const BusinessDetails = ({ item }) => {
 
 const styles = StyleSheet.create({
     mainContainer: {
-        marginRight: 20,
+        marginLeft: 16,
         marginBottom: 16,
         height: 200,
     },
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     },
     reviewStyle: {
         fontSize: 14,
+        color: "gray",
     },
 });
 

@@ -8,6 +8,7 @@ const BusinessList = ({ title, businesses }) => {
             <Text style={styles.title}>{title}</Text>
             <FlatList
                 horizontal
+                showsHorizontalScrollIndicator={false}
                 data={businesses}
                 keyExtractor={business => business.id}
                 renderItem={({ item }) => {
@@ -20,11 +21,12 @@ const BusinessList = ({ title, businesses }) => {
 
 const styles = StyleSheet.create({
     mainContainer: {
-        marginLeft: 16,
+        marginBottom: 8,
         borderBottomWidth: 1,
         borderColor: "#ccc",
     },
     title: {
+        marginLeft: 16,
         fontSize: 18,
         fontWeight: "bold",
         marginVertical: 12,
