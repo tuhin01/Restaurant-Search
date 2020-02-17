@@ -1,9 +1,9 @@
 import React from "react";
-import {FlatList, StyleSheet, Text, TouchableOpacity, View} from "react-native";
-import {useNavigation} from "@react-navigation/native";
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import BusinessDetails from "./BusinessDetails";
 
-const BusinessList = ({title, businesses}) => {
+const BusinessList = ({ title, businesses }) => {
     if (!businesses.length) {
         return null;
     }
