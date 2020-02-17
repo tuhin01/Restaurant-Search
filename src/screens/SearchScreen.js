@@ -4,8 +4,7 @@ import SearchBar from "../components/SearchBar";
 import useBusinesses from "../hooks/useBusinesses";
 import BusinessList from "../components/BusinessList";
 
-const SearchScreen = props => {
-    let { navigation } = props;
+const SearchScreen = ({ navigation }) => {
     navigation.setOptions({ title: "Business Search" });
 
     const [searchTerm, setSearchTerm] = useState("");

@@ -1,8 +1,10 @@
 import React from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import BusinessDetails from "./BusinessDetails";
 
 const BusinessList = ({ title, businesses }) => {
+    const navigation = useNavigation();
     return (
         <View style={styles.mainContainer}>
             <Text style={styles.title}>{title}</Text>
@@ -12,7 +14,15 @@ const BusinessList = ({ title, businesses }) => {
                 data={businesses}
                 keyExtractor={business => business.id}
                 renderItem={({ item }) => {
-                    return <BusinessDetails item={item} />;
+                    return (
+                        <TouchableOpacity
+                            onPress={() =>
+                                navigation.navigate("BusinessScreen", { business: item })
+                            }
+                        >
+                            <BusinessDetails item={item} />
+                        </TouchableOpacity>
+                    );
                 }}
             />
         </View>
